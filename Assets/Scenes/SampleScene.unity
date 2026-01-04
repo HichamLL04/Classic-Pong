@@ -481,7 +481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 386548212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bordes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 630436409}
   - component: {fileID: 630436411}
   - component: {fileID: 630436410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PorteriaAzul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 1668016650}
   - component: {fileID: 1668016652}
   - component: {fileID: 1668016651}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PorteriaNaranja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1577,9 +1577,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallMovement
   velocidad: 10
-  gol: {fileID: 8300000, guid: d2e7425a25e8a794d9ec41141b2e91e7, type: 3}
-  raqueta: {fileID: 8300000, guid: 3713a76da243b5c46baacd5bf4ce6458, type: 3}
-  pared: {fileID: 8300000, guid: 82939b8b93043c84f8a4eb7a2133291e, type: 3}
+  gol: {fileID: 8300000, guid: e5df5b7fca43718469c6349fa042fabe, type: 3}
+  raqueta: {fileID: 8300000, guid: ca5c132d98b280941885bfdff760bef5, type: 3}
+  pared: {fileID: 8300000, guid: 60b85fa263f79ea4e95ac5308024b98d, type: 3}
+  incrementoVelocidad: 0.5
+  velocidadMaxima: 25
 --- !u!82 &1911063170
 AudioSource:
   m_ObjectHideFlags: 0
