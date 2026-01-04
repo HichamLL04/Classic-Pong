@@ -10,26 +10,38 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float playerSpeed = 1;
     Rigidbody2D myrigidbody2D;
 
+    bool arribaPresionado = false;
+    bool abajoPresionado = false;
+
     void Start()
     {
         myrigidbody2D = GetComponent<Rigidbody2D>();
-        
+
     }
 
     void Update()
     {
 
     }
+    void FixedUpdate()
+    {
+        float direccion = 0f;
+
+        if (arribaPresionado) direccion += 1f;
+        if (abajoPresionado) direccion -= 1f;
+
+        myrigidbody2D.velocity = new Vector2(0f, direccion * playerSpeed);
+    }
 
     void OnArriba(InputValue value)
     {
         if (value.isPressed)
         {
-            myrigidbody2D.velocity = new Vector2(0f, playerSpeed);
+            arribaPresionado = true;
         }
         else
         {
-            myrigidbody2D.velocity = new Vector2(0f, 0f);
+            arribaPresionado = false;
         }
     }
 
@@ -37,11 +49,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.isPressed)
         {
-            myrigidbody2D.velocity = new Vector2(0f, -playerSpeed);
+            abajoPresionado = true;
         }
         else
         {
-            myrigidbody2D.velocity = new Vector2(0f, 0f);
+            abajoPresionado = false;
         }
     }
 }
