@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if (arribaPresionado) direccion += 1f;
         if (abajoPresionado) direccion -= 1f;
 
-        myrigidbody2D.velocity = new Vector2(0f, direccion * playerSpeed);
+        myrigidbody2D.linearVelocity = new Vector2(0f, direccion * playerSpeed);
     }
 
     void OnArriba(InputValue value)
