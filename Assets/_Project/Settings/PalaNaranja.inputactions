@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "PalaNaranja",
+    "maps": [
+        {
+            "name": "Movimiento",
+            "id": "eb54e403-5148-4291-abaf-31efbf6ddc9c",
+            "actions": [
+                {
+                    "name": "Arriba",
+                    "type": "Button",
+                    "id": "73ab913d-f03a-4c72-8078-1a0cd8a7c513",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Abajo",
+                    "type": "Button",
+                    "id": "e063e28b-e91f-4330-b932-994192e72010",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1dfa4601-21cf-4f7d-b683-e68e4f51e0db",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Arriba",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "988b4147-9199-4d4e-8a35-22544e55b167",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Abajo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
