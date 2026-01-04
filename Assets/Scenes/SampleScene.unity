@@ -146,8 +146,8 @@ Transform:
   m_GameObject: {fileID: 82938751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18, y: -5.39, z: 0}
-  m_LocalScale: {x: 18.37726, y: 0.28, z: 1}
+  m_LocalPosition: {x: -0.18, y: -5.46, z: 0}
+  m_LocalScale: {x: 17.825943, y: 0.28, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 386548212}
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eee53097b75a9c4c89f26fa848fd085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 10
 --- !u!1 &386548211
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,16 +496,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386548211}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.20237023, y: 0.2740776, z: 0.08830478}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.102019, y: 12.327206, z: -4043.9644}
+  m_LocalScale: {x: 44.977066, y: 44.977066, z: 44.977066}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 82938752}
   - {fileID: 1093750644}
   - {fileID: 1668016650}
   - {fileID: 630436409}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1266402301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -662,7 +662,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -923,10 +923,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 450}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -973,6 +973,7 @@ RectTransform:
   - {fileID: 311405571}
   - {fileID: 1735705085}
   - {fileID: 1911063165}
+  - {fileID: 386548212}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1305,7 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eee53097b75a9c4c89f26fa848fd085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 10
 --- !u!50 &1735705090
 Rigidbody2D:
   serializedVersion: 5
@@ -1574,7 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7dcb32f2d578543b00d0b7886aa18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallMovement
-  velocidad: 5
+  velocidad: 10
 --- !u!1 &2106835004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,4 +1658,3 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1908871281}
   - {fileID: 1266402301}
-  - {fileID: 386548212}

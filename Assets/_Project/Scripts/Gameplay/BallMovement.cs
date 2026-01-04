@@ -7,7 +7,7 @@ public class BallMovement : MonoBehaviour
     void Start()
     {
         myrigidbody2D = GetComponent<Rigidbody2D>();
-        myrigidbody2D.linearVelocity = new Vector2(velocidad, 0f);
+        myrigidbody2D.linearVelocity = new Vector2(velocidad, 2f);
     }
 
     void Update()
