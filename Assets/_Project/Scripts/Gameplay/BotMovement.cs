@@ -7,9 +7,10 @@ public class BotMovement : MonoBehaviour
     [SerializeField] float playerSpeed = 5;
 
     Rigidbody2D myrigidbody2D;
-    public bool botPlaying = true;
+    public bool botPlaying;
     void Start()
     {
+        botPlaying = PlayerPrefs.GetInt("botPlaying", 0) == 1;
         if (botPlaying)
         {
             PlayerMovement playerMovement = GetComponent<PlayerMovement>();
