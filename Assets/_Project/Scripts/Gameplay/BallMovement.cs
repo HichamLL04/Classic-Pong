@@ -9,7 +9,7 @@ public class BallMovement : MonoBehaviour
     [SerializeField] AudioClip pared;
     [SerializeField] float incrementoVelocidad = 0.5f;
     [SerializeField] float velocidadMaxima = 30f;
-    CountPoints countPoints;
+    [SerializeField] CountPoints countPoints; 
 
     Rigidbody2D myrigidbody2D;
     CircleCollider2D mycircleCollider2D;
@@ -24,7 +24,6 @@ public class BallMovement : MonoBehaviour
         myrigidbody2D = GetComponent<Rigidbody2D>();
         mycircleCollider2D = GetComponent<CircleCollider2D>();
         audioSource = GetComponent<AudioSource>();
-        countPoints = GetComponent<CountPoints>();
         StartGame();
     }
 
