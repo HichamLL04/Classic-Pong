@@ -17,8 +17,6 @@ public class BotMovement : MonoBehaviour
             playerMovement.enabled = false;
             myrigidbody2D = GetComponent<Rigidbody2D>();
         }
-
-
     }
 
     void Update()
