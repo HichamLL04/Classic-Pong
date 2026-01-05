@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
 
     bool arribaPresionado = false;
     bool abajoPresionado = false;
-    bool botJugando = false;
 
     void Start()
     {

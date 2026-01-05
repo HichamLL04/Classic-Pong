@@ -38,44 +38,40 @@ public class BallMovement : MonoBehaviour
         if (mycircleCollider2D.IsTouchingLayers(LayerMask.GetMask("Paredes")))
         {
             audioSource.PlayOneShot(pared);
+            Vector2 direccion = myrigidbody2D.linearVelocity.normalized;
+            myrigidbody2D.linearVelocity = direccion * velocidad;
         }
         else if (mycircleCollider2D.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
             audioSource.PlayOneShot(raqueta);
+            Vector2 direccion = myrigidbody2D.linearVelocity.normalized;
+            float desviacion = Random.Range(-0.5f, 0.5f);
+            direccion.y += desviacion;
+            direccion = direccion.normalized;
+            myrigidbody2D.linearVelocity = direccion * velocidad;
         }
+
         if (velocidad <= velocidadMaxima)
         {
             velocidad += incrementoVelocidad;
         }
-
-        Vector2 direccion = myrigidbody2D.linearVelocity.normalized;
-        myrigidbody2D.linearVelocity = direccion * velocidad;
-        Debug.Log(velocidad);
-
-
     }
     void OnTriggerEnter2D(Collider2D collision)
-{
-    // Debug para verificar
-    if (countPoints == null)
     {
-        Debug.LogError("CountPoints está NULL! Asígnalo en el Inspector de la pelota.");
-        return;
+
+        if (collision.CompareTag("Azul"))
+        {
+            audioSource.PlayOneShot(gol);
+            countPoints.SumarPuntuacion("Azul");
+            RestartGame(Vector2.right);
+        }
+        else if (collision.CompareTag("Naranja"))
+        {
+            audioSource.PlayOneShot(gol);
+            countPoints.SumarPuntuacion("Naranja");
+            RestartGame(Vector2.left);
+        }
     }
-    
-    if (collision.CompareTag("Azul"))
-    {
-        audioSource.PlayOneShot(gol);
-        countPoints.SumarPuntuacion("Azul");
-        RestartGame(Vector2.right);
-    }
-    else if (collision.CompareTag("Naranja"))
-    {
-        audioSource.PlayOneShot(gol);
-        countPoints.SumarPuntuacion("Naranja");
-        RestartGame(Vector2.left);
-    }
-}
 
     void StartGame()
     {

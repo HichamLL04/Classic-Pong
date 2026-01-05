@@ -408,6 +408,7 @@ GameObject:
   - component: {fileID: 311405574}
   - component: {fileID: 311405573}
   - component: {fileID: 311405575}
+  - component: {fileID: 311405576}
   m_Layer: 6
   m_Name: PalaAzul
   m_TagString: Untagged
@@ -608,6 +609,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eee53097b75a9c4c89f26fa848fd085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 15
+--- !u!114 &311405576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311405569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956eab75563c7aa4f90047f0c455a840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotMovement
+  pelota: {fileID: 1911063164}
   playerSpeed: 15
 --- !u!1 &386548211
 GameObject:
