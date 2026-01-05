@@ -88,7 +88,7 @@ public class BallMovement : MonoBehaviour
         transform.position = Vector3.zero;
 
 
-        lastDireccion = direccion;
+        lastDireccion = -direccion;
         Invoke(nameof(MoveBall), 1f);
     }
 
