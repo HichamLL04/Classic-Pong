@@ -9,6 +9,7 @@ public class BallMovement : MonoBehaviour
     [SerializeField] AudioClip pared;
     [SerializeField] float incrementoVelocidad = 0.5f;
     [SerializeField] float velocidadMaxima = 30f;
+    CountPoints countPoints;
 
     Rigidbody2D myrigidbody2D;
     CircleCollider2D mycircleCollider2D;
@@ -23,6 +24,7 @@ public class BallMovement : MonoBehaviour
         myrigidbody2D = GetComponent<Rigidbody2D>();
         mycircleCollider2D = GetComponent<CircleCollider2D>();
         audioSource = GetComponent<AudioSource>();
+        countPoints = GetComponent<CountPoints>();
         StartGame();
     }
 
@@ -53,18 +55,27 @@ public class BallMovement : MonoBehaviour
 
     }
     void OnTriggerEnter2D(Collider2D collision)
+{
+    // Debug para verificar
+    if (countPoints == null)
     {
-        if (collision.CompareTag("Azul"))
-        {
-            audioSource.PlayOneShot(gol);
-            RestartGame(Vector2.right);
-        }
-        else if (collision.CompareTag("Naranja"))
-        {
-            audioSource.PlayOneShot(gol);
-            RestartGame(Vector2.left);
-        }
+        Debug.LogError("CountPoints está NULL! Asígnalo en el Inspector de la pelota.");
+        return;
     }
+    
+    if (collision.CompareTag("Azul"))
+    {
+        audioSource.PlayOneShot(gol);
+        countPoints.SumarPuntuacion("Azul");
+        RestartGame(Vector2.right);
+    }
+    else if (collision.CompareTag("Naranja"))
+    {
+        audioSource.PlayOneShot(gol);
+        countPoints.SumarPuntuacion("Naranja");
+        RestartGame(Vector2.left);
+    }
+}
 
     void StartGame()
     {

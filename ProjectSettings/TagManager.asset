@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Azul
   - Naranja
+  - IA
   layers:
   - Default
   - TransparentFX
