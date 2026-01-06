@@ -12,23 +12,6 @@ Este proyecto es **el primer juego** de un reto personal:
 
 El objetivo del reto es mejorar las habilidades de desarrollo creando **20 juegos pequeños pero completos**.
 
----
-
-## 📑 Tabla de Contenidos
-
-- [Descripción](#-descripción)
-- [Controles](#-controles)
-- [Sobre el reto](#-sobre-el-reto)
-- [Sobre Pong](#-sobre-pong)
-- [Assets y Sonido](#-assets-y-sonido)
-- [Tecnologías](#-tecnologías)
-- [Instalación](#-instalación)
-- [Uso](#-uso)
-- [Créditos](#-créditos)
-- [Licencia](#-licencia)
-
----
-
 ## 📖 Descripción
 
 **Pong Classic** recrea la experiencia del videojuego original manteniendo una estética simple y mecánicas clásicas.  
@@ -45,19 +28,6 @@ El juego enfrenta a dos jugadores locales controlando paletas verticales que gol
 - **Jugador Naranja**
   - `↑` (Arrow Up) → Mover paleta hacia arriba
   - `↓` (Arrow Down) → Mover paleta hacia abajo
-
----
-
-## 🏆 Sobre el reto
-
-**20 Games Challenge** es un desafío personal cuyo objetivo es:
-
-- Mejorar habilidades de desarrollo de videojuegos
-- Practicar diseño de mecánicas simples
-- Completar 20 juegos pequeños pero funcionales
-- Aprender haciendo 🚀
-
-Pong Classic representa el **Juego #1** del reto.
 
 ---
 
@@ -87,4 +57,3 @@ por **Myeb Studios**
 Sonidos obtenidos de:  
 🔗 https://freesound.org/
 
--
