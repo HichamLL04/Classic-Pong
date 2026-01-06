@@ -2,37 +2,38 @@ using System;
 using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class MenuOptions : MonoBehaviour
 {
     [SerializeField] GameObject juego;
     [SerializeField] GameObject subMenu;
     [SerializeField] Rigidbody2D pelota;
-    
+
     bool isPaused = false;
-    
+
     Vector2 pelotaVelocidadGuardada;
     float pelotaAngularVelocidadGuardada;
 
     void Start()
     {
-        if (juego != null) 
+        if (juego != null)
         {
             juego.SetActive(true);
         }
-        
-        if (subMenu != null) 
+
+        if (subMenu != null)
         {
             subMenu.SetActive(false);
         }
-        
+
         Time.timeScale = 1f;
         isPaused = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (isPaused)
                 ReturnGame();
@@ -74,16 +75,16 @@ public class MenuOptions : MonoBehaviour
             pelotaVelocidadGuardada = pelota.linearVelocity;
             pelotaAngularVelocidadGuardada = pelota.angularVelocity;
         }
-        
+
         Time.timeScale = 0f;
         isPaused = true;
-        
-        if (juego != null) 
+
+        if (juego != null)
         {
             juego.SetActive(false);
         }
-        
-        if (subMenu != null) 
+
+        if (subMenu != null)
         {
             subMenu.SetActive(true);
         }
@@ -93,13 +94,13 @@ public class MenuOptions : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
-        
-        if (juego != null) 
+
+        if (juego != null)
         {
             juego.SetActive(true);
         }
-        
-        if (subMenu != null) 
+
+        if (subMenu != null)
         {
             subMenu.SetActive(false);
         }
