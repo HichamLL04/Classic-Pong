@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float playerSpeed = 1;
+    [SerializeField] float playerSpeed = 15;
     Rigidbody2D myrigidbody2D;
 
     bool arribaPresionado = false;

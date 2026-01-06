@@ -4,7 +4,8 @@ public class BotMovement : MonoBehaviour
 {
 
     [SerializeField] GameObject pelota;
-    [SerializeField] float playerSpeed = 5;
+    [SerializeField] float playerSpeed = 4;
+    [SerializeField] float margenError = 1.5f;
 
     Rigidbody2D myrigidbody2D;
     public bool botPlaying;
@@ -26,7 +27,14 @@ public class BotMovement : MonoBehaviour
             float posicionYPelota = pelota.transform.position.y;
             float posicionYPala = myrigidbody2D.transform.position.y;
             float direccion = posicionYPelota - posicionYPala;
-            SeguirPelota(direccion);
+            if (Mathf.Abs(direccion) > margenError)
+            {
+                SeguirPelota(direccion);
+            }
+            else
+            {
+                myrigidbody2D.linearVelocity = Vector2.zero;
+            }
         }
     }
 
