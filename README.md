@@ -7,8 +7,11 @@ Fácil de aprender y difícil de dominar.
 
 Este proyecto es **el primer juego** de un reto personal:
 
-🎮 **20 Games Challenge**  
+👾 **20 Games Challenge**  
 🔗 https://20_games_challenge.gitlab.io
+
+🎮 **Pruebalo sin descargarlo**  
+🔗 https://kaiser-bot.itch.io/pong-classic
 
 El objetivo del reto es mejorar las habilidades de desarrollo creando **20 juegos pequeños pero completos**.
 
